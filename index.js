@@ -1,5 +1,6 @@
 
 require("dotenv").config();
+const keepAlive = require('./server.js')
 const TelegramBot = require("node-telegram-bot-api");
 const { OpenAIApi, Configuration } = require("openai");
 
@@ -68,3 +69,4 @@ bot.on("polling_error", (error) => {
 
 console.log("Bot is online.");
 
+keepAlive()
